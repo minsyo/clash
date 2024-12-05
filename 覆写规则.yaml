@@ -1,0 +1,4 @@
++proxies:
+  - {name: home, server: riminsyo.top, port: 1103, type: ss, password: 899022, cipher: aes-128-gcm, skip-cert-verify: false, udp: true}
++rules:
+  - IP-CIDR,10.0.0.0/8,home,no-resolve
