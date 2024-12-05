@@ -58,7 +58,7 @@ DOMAIN-SUFFIX,steampowered.com
 DOMAIN-SUFFIX,abcproxy.com
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,bulianglin.com
-DOMAIN-SUFFIX,clubsim.com
+DOMAIN-SUFFIX,clubsim.com.hk
 
 IP-CIDR,8.8.8.8/32,no-resolve
 IP-CIDR,8.8.4.4/32,no-resolve
