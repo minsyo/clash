@@ -89,35 +89,35 @@ proxy-groups:
   - {name: home, server: riminsyo.top, port: 1103, type: ss, password: 899022, cipher: aes-128-gcm, skip-cert-verify: false, udp: true}
 rule-providers:
   Microsoft:
-    url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
     path: ./Microsoft/Microsoft.list
     behavior: classical
     interval: 86400
     format: text
     type: http
   Apple:
-    url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
     path: ./Apple/Apple.list
     behavior: classical
     interval: 86400
     format: text
     type: http
   AI:
-    url: https://ghp.ci/https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/AI.list
+    url: https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/AI.list
     path: ./main/AI.list
     behavior: classical
     interval: 86400
     format: text
     type: http
   YouTube:
-    url: https://ghp.ci/https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
     path: ./YouTube/YouTube.list
     behavior: classical
     interval: 86400
     format: text
     type: http
   Netflix:
-    url: https://ghp.ci/https:https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Netflix/Netflix.list
     path: ./Netflix/Netflix.list
     behavior: classical
     interval: 86400
