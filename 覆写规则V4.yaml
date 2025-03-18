@@ -83,7 +83,7 @@ proxy-groups:
 +proxies:
   - {name: home, server: riminsyo.top, port: 1103, type: ss, password: 899022, cipher: aes-128-gcm, skip-cert-verify: false, udp: true}
 rule-providers:
-   Apple:
+  Apple:
     url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
     path: ./Apple/Apple.list
     behavior: classical
