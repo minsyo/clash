@@ -46,11 +46,6 @@ proxy-groups:
       - 🇺🇲 美国节点
       - 🚀 手动切换
       - DIRECT
-  - name: Ⓜ️ Microsoft
-    type: select
-    proxies:
-      - DIRECT
-      - 🚀 手动切换
   - name: 🍎 Apple
     type: select
     proxies:
