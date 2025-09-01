@@ -1,0 +1,62 @@
+# 必读！！！
+# 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
+# 跑裸核用户请自行去掉下方控制面板模块的注释。
+# 机场订阅
+proxy-providers:
+  Airport1:
+    url: https://hongxingyun10.vip/hxyunvip?token=5cbeb0a1c34b34fa801846f2f61af1fc
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+    proxy: 直连
+
+# 节点信息
+proxies:
+  - {name: 直连, type: direct}
+
+proxy-groups:
+  - {name: 🚀 手动切换, type: select, include-all: true}
+  - {name: 💬 AI, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点, 🚀 手动切换, 直连]}
+  - {name: 🌍 国外, type: select, proxies: [🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点, 🚀 手动切换, 直连]}
+  - {name: 🌏 国内, type: select, proxies: [🚀 手动切换, 直连]}
+  - {name: 🇭🇰 香港节点, type: select, include-all: true, filter: "(?i)港|hk|hongkong|hong kong"}
+  - {name: 🇨🇳 台湾节点, type: select, include-all: true, filter: "(?i)台|新北|彰化|TW|Taiwan"}
+  - {name: 🇯🇵 日本节点, type: select, include-all: true, filter: "(?i)日|jp|japan"}
+  - {name: 🇸🇬 新加坡节点, type: select, include-all: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore"}
+  - {name: 🇺🇲 美国节点, type: select, include-all: true, filter: "(?i)美|us|unitedstates|united states"}
+  
+# 规则匹配
+# 此规则部分没有做防泄露处理，因为弊严重大于利！
+rules:
+  - RULE-SET,ai,💬 AI
+  - RULE-SET,Proxy,🌍 国外
+  - RULE-SET,ProxyGuaranteed,🌍 国外
+  - MATCH,🌏 国内
+
+# 规则集
+## type：可选http/file/inline  behavior：可选domain/ipcidr/classical format：可选yaml/text/mrs
+rule-providers:
+  ai:
+    url: https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI.list
+    path: ./main/AI.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Proxy:
+    url: https://raw.githubusercontent.com/minsyo/clash/refs/heads/main/Proxy.list
+    path: ./main/Proxy.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  ProxyGuaranteed:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
+    path: ./ruleset/ChinaDomain.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
