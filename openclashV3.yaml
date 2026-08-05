@@ -1,0 +1,109 @@
+# 必读！！！
+# 注意规则在满足自己需求情况下，尽量做到精简，不要过度复杂，以免影响性能。
+# 跑裸核用户请自行去掉下方控制面板模块的注释。
+
+# 机场订阅（未来有新机场直接在此处添加新的 provider 即可，下方的策略组无需任何修改）
+proxy-providers:
+  sakuracat:
+    url: https://cat.cn-ping.com/sabusuku?token=3d1362d9856afe2e97fe3ad15d23b413
+    type: http
+    interval: 86400
+    health-check:
+      enable: true
+      url: https://www.gstatic.com/generate_204
+      interval: 300
+
+dns:
+  default-nameserver:
+    - 223.5.5.5
+  proxy-server-nameserver:
+    - https://223.5.5.5/dns-query
+  # namesever尽量用运营商提供的DNS
+  nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+
+# 节点信息
+proxies:
+  - name: 🇬🇧 英国-链式落地          # 落地节点命名
+    type: socks5                  # 节点协议
+    server: 51.241.157.53         # 住宅IP 代理地址
+    port: 50101                   # 端口号
+    username: maxminc             # 用户名
+    password: CZC3TtQ3L2          # 密码
+    udp: true
+    dialer-proxy: 香港-链式前置      # 指定前置代理节点组 
+
+proxy-groups:
+  # 业务策略组
+  - {name: 💬 AI, type: select, proxies: [🇬🇧 英国-链式落地, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点, DIRECT]}
+  - {name: 📹 YouTube, type: select, proxies: [🇬🇧 英国-链式落地, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点, DIRECT]}
+  - {name: 🍎 Apple, type: select, proxies: [DIRECT, 🇬🇧 英国-链式落地, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点]}
+  - {name: Ⓜ️ Microsoft, type: select, proxies: [DIRECT, 🇬🇧 英国-链式落地, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点]}
+  - {name: 🌍 国外, type: select, proxies: [🇬🇧 英国-链式落地, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点, DIRECT]}
+  - {name: 🌏 国内, type: select, proxies: [🇬🇧 英国-链式落地, 🇭🇰 香港节点, 🇨🇳 台湾节点, 🇯🇵 日本节点, 🇸🇬 新加坡节点, 🇺🇲 美国节点, DIRECT]}
+  
+  # 地区节点组（使用 include-all: true 自动聚合所有订阅机场节点，使用 gstatic 统一测速）
+  - {name: 🇭🇰 香港节点, type: url-test, include-all: true, filter: "(?i)港|hk|hongkong|hong kong", url: https://www.gstatic.com/generate_204, interval: 300}
+  - {name: 🇨🇳 台湾节点, type: url-test, include-all: true, filter: "(?i)台|新北|彰化|TW|Taiwan", url: https://www.gstatic.com/generate_204, interval: 300}
+  - {name: 🇯🇵 日本节点, type: url-test, include-all: true, filter: "(?i)日|jp|japan", url: https://www.gstatic.com/generate_204, interval: 300}
+  - {name: 🇸🇬 新加坡节点, type: url-test, include-all: true, filter: "(?i)新加坡|坡|狮城|SG|Singapore", url: https://www.gstatic.com/generate_204, interval: 300}
+  - {name: 🇺🇲 美国节点, type: url-test, include-all: true, filter: "(?i)美|us|unitedstates|united states", url: https://www.gstatic.com/generate_204, interval: 300}
+  
+  # 链式前置策略组（自动搜寻所有机场中的香港节点进行测速中转）
+  - {name: 香港-链式前置, type: url-test, include-all: true, filter: "(?i)港|hk|hongkong|hong kong", url: https://www.gstatic.com/generate_204, interval: 300}
+   
+# 规则匹配
+rules:
+  - RULE-SET,ai,💬 AI
+  - RULE-SET,youtube,📹 YouTube
+  - RULE-SET,apple,🍎 Apple
+  - RULE-SET,microsoft,Ⓜ️ Microsoft
+  - RULE-SET,Proxy,🌍 国外
+  - RULE-SET,ProxyGuaranteed,🌍 国外
+  - MATCH,🌏 国内
+
+# 规则集
+rule-providers:
+  ai:
+    url: https://raw.githubusercontent.com/liandu2024/clash/refs/heads/main/list/AI.list
+    path: ./AI.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  youtube:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/YouTube/YouTube.list
+    path: ./YouTube.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  apple:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Apple/Apple.list
+    path: ./Apple.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  microsoft:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/Microsoft/Microsoft.list
+    path: ./Microsoft.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  Proxy:
+    url: https://raw.githubusercontent.com/minsyo/clash/refs/heads/main/Proxy.list
+    path: ./Proxy.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
+  ProxyGuaranteed:
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/refs/heads/master/rule/Clash/Global/Global.list
+    path: ./ChinaDomain.list
+    behavior: classical
+    interval: 86400
+    format: text
+    type: http
