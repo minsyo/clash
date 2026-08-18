@@ -7,11 +7,30 @@
 # ---------------------------------------------------
 DOMAIN-SUFFIX,mexc.com
 DOMAIN-SUFFIX,mexc.co
-DOMAIN-SUFFIX,mexc.link
+DOMAIN-SUFFIX,mexc.io
 DOMAIN-SUFFIX,mexc.app
+DOMAIN-SUFFIX,mexc.link
+DOMAIN-SUFFIX,mexc.site
+DOMAIN-SUFFIX,mexc.vip
+DOMAIN-SUFFIX,mexc.zone
+DOMAIN-SUFFIX,mexc.pro
+
+# 2. API 接口与 WebSocket 行情实时推送
 DOMAIN-SUFFIX,mexcapi.com
+DOMAIN-SUFFIX,wbs.mexc.com
+DOMAIN-SUFFIX,wbs-api.mexc.com
+
+# 3. 静态资源、图片 CDN 与数据分析上报
 DOMAIN-SUFFIX,mexc-assets.com
+DOMAIN-SUFFIX,mexc-static.com
+DOMAIN-SUFFIX,mexcsensors.com
+
+# 4. MEXC 底层技术与 App 架构服务 (抓包排查确认)
+DOMAIN-SUFFIX,mocortech.com
+
+# 5. 关键字通用兜底 (自动匹配任何包含 mexc / mocor 的新子域名)
 DOMAIN-KEYWORD,mexc
+DOMAIN-KEYWORD,mocor
 
 # ---------------------------------------------------
 # 2. Coins.ph (菲律宾加密货币/钱包)
