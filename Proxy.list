@@ -62,17 +62,36 @@ DOMAIN-SUFFIX,clubsim.com.hk
 #DOMAIN-SUFFIX,ping0.cc
 #DOMAIN-SUFFIX,ipinfo.io
 
-# MEXC Exchange
+# 关键词匹配（拦截包含 mexc / mexsv 的任意子域名与 API）
 DOMAIN-KEYWORD,mexc
+DOMAIN-KEYWORD,mexsv
+
+# App 核心 API / WebSocket / 行情推送 / SDK 域名
+DOMAIN-SUFFIX,mexcapi.com
+DOMAIN-SUFFIX,mexc-api.com
+DOMAIN-SUFFIX,mexc-api.net
+DOMAIN-SUFFIX,mexc-sdk.com
+DOMAIN-SUFFIX,mexc-static.com
+DOMAIN-SUFFIX,mexc-assets.com
+DOMAIN-SUFFIX,mexcmex.com
+
+# 官方主要域名及多线路备用域名
 DOMAIN-SUFFIX,mexc.com
 DOMAIN-SUFFIX,mexc.io
 DOMAIN-SUFFIX,mexc.link
 DOMAIN-SUFFIX,mexc.vip
-DOMAIN-SUFFIX,mexsv.com
 DOMAIN-SUFFIX,mexc.co
 DOMAIN-SUFFIX,mexc.zone
 DOMAIN-SUFFIX,mexc.app
 DOMAIN-SUFFIX,mexc.net
+DOMAIN-SUFFIX,mexc.fm
+DOMAIN-SUFFIX,mexc.la
+DOMAIN-SUFFIX,mexc.im
+DOMAIN-SUFFIX,mexc.services
+DOMAIN-SUFFIX,mexc.work
+DOMAIN-SUFFIX,mexc.live
+DOMAIN-SUFFIX,mexc.org
+DOMAIN-SUFFIX,mexsv.com
 
 
 
