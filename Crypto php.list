@@ -14,28 +14,47 @@ DOMAIN-SUFFIX,mexc.site
 DOMAIN-SUFFIX,mexc.vip
 DOMAIN-SUFFIX,mexc.zone
 DOMAIN-SUFFIX,mexc.pro
+DOMAIN-SUFFIX,mexc.live
+DOMAIN-SUFFIX,mxc.com
+DOMAIN-SUFFIX,mxc.ai
 DOMAIN-SUFFIX,mexcapi.com
+DOMAIN-SUFFIX,mexc-api.com
+DOMAIN-SUFFIX,mexccdn.com
+DOMAIN-SUFFIX,mxcapi.com
 DOMAIN-SUFFIX,mexc-assets.com
 DOMAIN-SUFFIX,mexc-static.com
 DOMAIN-SUFFIX,mexcsensors.com
 
-# 2. 底层架构与备用/合约 API 镜像域名 (抓包实测)
+# ---------------------------------------------------
+# 抓包实测——隐藏/伪装后端 API 与镜像域名
+# ---------------------------------------------------
+# App 配置、前端代理与静态资源
 DOMAIN-SUFFIX,mocortech.com
-DOMAIN-SUFFIX,hotbookzone.com     # 包含 futures.hotbookzone.com (合约交易)
+# 合约交易、WebSocket 行情实时推送 (futures / wbs / www)
+DOMAIN-SUFFIX,hotbookzone.com
+# P2P、OTC 场外交易、预测盘与返佣接口 (p2p / futures / otc / prediction)
+DOMAIN-SUFFIX,coldbookfly.ru
+# 镜像备用域名组
 DOMAIN-SUFFIX,greentreeone.com
 DOMAIN-SUFFIX,flytogarden.com
 DOMAIN-SUFFIX,dgshen.com
-DOMAIN-SUFFIX,coldbookfly.ru
+# 异常监控、Sentry、Watchman SDK 链路 (sentry-new / watchman / trochi)
 DOMAIN-SUFFIX,gotoda.co
 
-# 3. App 消息推送与云端日志监控
+# ---------------------------------------------------
+# App 极光/推送服务与日志上报 (提权规则，防国内规则误拦截)
+# ---------------------------------------------------
 DOMAIN-SUFFIX,engagelab.cc
 DOMAIN-SUFFIX,theengagelab.com
-DOMAIN-KEYWORD,mocor-app
+# 阿里云新加坡日志服务 (通过关键字提权，优先走代理)
+DOMAIN-KEYWORD,molor-app
 
-# 4. 关键字通用兜底
+# ---------------------------------------------------
+# 品牌与关键词保底匹配
+# ---------------------------------------------------
 DOMAIN-KEYWORD,mexc
 DOMAIN-KEYWORD,mocor
+DOMAIN-KEYWORD,molor
 
 # ---------------------------------------------------
 # 2. Coins.ph (菲律宾加密货币/钱包)
