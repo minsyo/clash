@@ -59,9 +59,20 @@ DOMAIN-SUFFIX,abcproxy.com
 DOMAIN-SUFFIX,qichiyu.com
 DOMAIN-SUFFIX,bulianglin.com
 DOMAIN-SUFFIX,clubsim.com.hk
-DOMAIN-SUFFIX,mexc.com
 #DOMAIN-SUFFIX,ping0.cc
 #DOMAIN-SUFFIX,ipinfo.io
+
+# MEXC Exchange
+DOMAIN-KEYWORD,mexc
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,mexc.io
+DOMAIN-SUFFIX,mexc.link
+DOMAIN-SUFFIX,mexc.vip
+DOMAIN-SUFFIX,mexsv.com
+DOMAIN-SUFFIX,mexc.co
+DOMAIN-SUFFIX,mexc.zone
+DOMAIN-SUFFIX,mexc.app
+DOMAIN-SUFFIX,mexc.net
 
 
 
