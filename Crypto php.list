@@ -25,4 +25,6 @@ DOMAIN-SUFFIX,coins.asia
 DOMAIN-SUFFIX,maya.ph
 DOMAIN-SUFFIX,paymaya.com
 DOMAIN-SUFFIX,paymaya.ph
+DOMAIN-SUFFIX,voyagerapis.com      # 补全：Maya 核心 API/广告及代理服务
 DOMAIN-KEYWORD,paymaya
+DOMAIN-KEYWORD,voyagerapis
