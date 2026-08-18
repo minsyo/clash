@@ -1,0 +1,66 @@
+# ===================================================
+# Crypto全球 (Wise, Binance, OKX, Kraken)
+# ===================================================
+
+# ---------------------------------------------------
+# 1. Wise (原 TransferWise)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,wise.com
+DOMAIN-SUFFIX,transferwise.com
+DOMAIN-SUFFIX,wise.app
+DOMAIN-SUFFIX,wise-assets.com
+DOMAIN-KEYWORD,wise
+DOMAIN-KEYWORD,transferwise
+
+# ---------------------------------------------------
+# 2. Binance (币安)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,binance.com
+DOMAIN-SUFFIX,binance.net
+DOMAIN-SUFFIX,binance.co
+DOMAIN-SUFFIX,binance.me
+DOMAIN-SUFFIX,binance.org
+DOMAIN-SUFFIX,binance.cloud
+DOMAIN-SUFFIX,binance.charity
+DOMAIN-SUFFIX,binance.vision
+DOMAIN-SUFFIX,binance.in
+DOMAIN-SUFFIX,binance.im
+DOMAIN-SUFFIX,binance.info
+DOMAIN-SUFFIX,binanceapi.com
+DOMAIN-SUFFIX,bnbstatic.com
+DOMAIN-SUFFIX,saasbnb.com
+DOMAIN-SUFFIX,bntrace.com
+DOMAIN-KEYWORD,binance
+
+# ---------------------------------------------------
+# 3. OKX (欧易)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,okx.com
+DOMAIN-SUFFIX,okex.com
+DOMAIN-SUFFIX,oklink.com
+DOMAIN-SUFFIX,okx.link
+DOMAIN-SUFFIX,okx.site
+DOMAIN-SUFFIX,okx.info
+DOMAIN-SUFFIX,okx.tech
+DOMAIN-SUFFIX,okx.app
+DOMAIN-SUFFIX,okx.org
+DOMAIN-SUFFIX,okex.org
+DOMAIN-SUFFIX,okxcdn.com
+DOMAIN-SUFFIX,okx-dns.com
+DOMAIN-SUFFIX,okx-dns1.com
+DOMAIN-SUFFIX,okx-dns2.com
+DOMAIN-KEYWORD,okx
+DOMAIN-KEYWORD,okex
+
+# ---------------------------------------------------
+# 4. Kraken (海妖全系列)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,kraken.com
+DOMAIN-SUFFIX,krakenfutures.com
+DOMAIN-SUFFIX,kraken.app
+DOMAIN-SUFFIX,kraken-assets.com
+DOMAIN-SUFFIX,payward.com
+DOMAIN-SUFFIX,krak.com
+DOMAIN-SUFFIX,krak.app
+DOMAIN-SUFFIX,krakenwallet.com
+DOMAIN-KEYWORD,kraken

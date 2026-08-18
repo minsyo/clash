@@ -1,0 +1,28 @@
+# ===================================================
+# Crypto php (MEXC, Coins.ph, Maya)
+# ===================================================
+
+# ---------------------------------------------------
+# 1. MEXC (抹茶)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,mexc.com
+DOMAIN-SUFFIX,mexc.co
+DOMAIN-SUFFIX,mexc.link
+DOMAIN-SUFFIX,mexc.app
+DOMAIN-SUFFIX,mexcapi.com
+DOMAIN-SUFFIX,mexc-assets.com
+DOMAIN-KEYWORD,mexc
+
+# ---------------------------------------------------
+# 2. Coins.ph (菲律宾加密货币/钱包)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,coins.ph
+DOMAIN-SUFFIX,coins.asia
+
+# ---------------------------------------------------
+# 3. Maya / PayMaya (菲律宾数字银行)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,maya.ph
+DOMAIN-SUFFIX,paymaya.com
+DOMAIN-SUFFIX,paymaya.ph
+DOMAIN-KEYWORD,paymaya
