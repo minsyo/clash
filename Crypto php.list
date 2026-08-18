@@ -65,9 +65,33 @@ DOMAIN-SUFFIX,coins.asia
 # ---------------------------------------------------
 # 3. Maya / PayMaya (菲律宾数字银行)
 # ---------------------------------------------------
+# Maya 官方主站与核心 API (实测 2701/2704)
+# ---------------------------------------------------
 DOMAIN-SUFFIX,maya.ph
+
+# ---------------------------------------------------
+# Maya Bank 数字银行核心接口 (实测 2702 关键漏网项)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,mayabank.ph
+
+# ---------------------------------------------------
+# PayMaya 历史接口与支付网关 (实测 2701/2703)
+# ---------------------------------------------------
 DOMAIN-SUFFIX,paymaya.com
 DOMAIN-SUFFIX,paymaya.ph
-DOMAIN-SUFFIX,voyagerapis.com      # 补全：Maya 核心 API/广告及代理服务
-DOMAIN-KEYWORD,paymaya
-DOMAIN-KEYWORD,voyagerapis
+
+# ---------------------------------------------------
+# Voyager Innovations 母公司底层 API (实测 2703)
+# ---------------------------------------------------
+DOMAIN-SUFFIX,voyagerapis.com
+
+# ---------------------------------------------------
+# App 内置核心服务 SDK (客服聊天与运营推送)
+# ---------------------------------------------------
+# Sendbird 即时客服与聊天 API (实测 2702)
+DOMAIN-KEYWORD,sendbird
+DOMAIN-SUFFIX,sendbird.com
+
+# CleverTap 运营提醒与推送 (实测 2701)
+DOMAIN-SUFFIX,clevertap.com
+DOMAIN-SUFFIX,clevertap-prod.com
