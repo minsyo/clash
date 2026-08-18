@@ -93,6 +93,10 @@ DOMAIN-SUFFIX,mexc.live
 DOMAIN-SUFFIX,mexc.org
 DOMAIN-SUFFIX,mexsv.com
 
+DOMAIN-KEYWORD,mocortech
+DOMAIN-SUFFIX,mocortech.com
+DOMAIN-SUFFIX,appconfig.mocortech.com
+
 
 
 IP-CIDR,8.8.8.8/32,no-resolve
