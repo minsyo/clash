@@ -64,3 +64,19 @@ DOMAIN-SUFFIX,krak.com
 DOMAIN-SUFFIX,krak.app
 DOMAIN-SUFFIX,krakenwallet.com
 DOMAIN-KEYWORD,kraken
+
+# 5. Bybit
+# ---------------------------------------------------
+# Main website, REST API and WebSocket subdomains
+DOMAIN-SUFFIX,bybit.com
+# Alternative mainnet API domain
+DOMAIN-SUFFIX,bytick.com
+# Regional domains listed in the official V5 API documentation
+DOMAIN-SUFFIX,bybit.tr
+DOMAIN-SUFFIX,bybit.kz
+DOMAIN-SUFFIX,bybitgeorgia.ge
+DOMAIN-SUFFIX,bybit.ae
+DOMAIN-SUFFIX,bybit.eu
+DOMAIN-SUFFIX,bybit.id
+# Brand keyword fallback
+DOMAIN-KEYWORD,bybit
