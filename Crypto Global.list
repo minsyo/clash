@@ -80,3 +80,8 @@ DOMAIN-SUFFIX,bybit.eu
 DOMAIN-SUFFIX,bybit.id
 # Brand keyword fallback
 DOMAIN-KEYWORD,bybit
+
+
+
+IP-CIDR,43.160.158.108/32,no-resolve
+IP-CIDR,43.135.121.179/32,no-resolve
